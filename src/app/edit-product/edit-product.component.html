@@ -1,0 +1,223 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+    <div class="page">
+        <div class="page-main" [class.opacity-2]="viewBox" [class.opacity-10]="!viewBox">
+            <div class="app-content">
+                <div class="side-app">
+                    <div class="page-header">
+                        <h4 class="page-title">Edit Product</h4>
+                    </div>
+                    <div class="card">
+                        <div class="card-header-1">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="card-title">
+                                        <!-- <button class="btn btn-success  width-150 button-rad" (click)="openModalBox('Create')"><i class="fa fa-plus-circle icon-space"
+                                                aria-hidden="true"></i>Create Product</button> -->
+
+                                                <a style="color:#fff;" class="btn btn-success  width-150 button-rad" routerLink="/products" href="javascript:void(0);">
+                                                Back
+                                                </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-none">
+                                    <div class="">
+                                        <form class="search-bar search-server">
+                                            <div class=" has-search">
+                                                <span class="fa fa-search form-control-feedback"></span>
+                                                <input [formControl]="searchField" type="text" class="form-control" placeholder="Search">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            
+                            <div class="card">
+                                <div class="card-body">
+                                    <form autocomplete="off">
+                                        <div class="row">
+                                            <div class="form-group col-6">
+                                                <label>Select Category</label>
+                                                <ng-autocomplete id='categoryName' class="form-control samp" notFoundText="Category Not Found" placeHolder="Category Name" [data]="categories" [searchKeyword]="keyword" [itemTemplate]="itemTemplate"
+                                                    [notFoundTemplate]="notFoundTemplate" [(ngModel)]="categoryName" [ngModelOptions]="{standalone: true}" (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)' #auto>
+                                                </ng-autocomplete>
+                
+                                                <ng-template #itemTemplate let-item>
+                                                    <div class="item">
+                                                        <span [innerHTML]="item.name"></span>
+                                                    </div>
+                                                </ng-template>
+                
+                                                <ng-template #notFoundTemplate let-notFound>
+                                                    <div [innerHTML]="notFound"></div>
+                                                </ng-template>
+                                                <p class="invalid-error" *ngIf="errorMsg.category_id">Category Name field is required
+                                                </p>
+                                            </div>
+
+                                            <div class="form-group col-6">
+                                                <label>Select Unit</label>
+                                                <select [(ngModel)]="unitId"  class="form-control" (ngModelChange)="onChangeUnit($event)" [ngModelOptions]="{standalone: true}">
+                                                    <option *ngFor="let country of unitList" [ngValue]="country.unit_id">{{country.unit_name}}</option>
+                                                 </select>
+                                            </div>
+                                           
+                                            <div class="form-group col-6">
+                                                <label>Enter Product Name</label>
+                                                <input [(ngModel)]="productName" type="text" class="form-control" id="productName" placeholder="Enter Product Name" [ngModelOptions]="{standalone: true}">
+                                                <p class="invalid-error" *ngIf="errorMsg.product_name">{{errorMsg.product_name}}
+                                                </p>
+                                            </div>
+    
+                                        
+                                       
+                                        <div class="form-group col-6">
+                                            <label>Product Description</label>
+                                            
+                                                <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="description" [ngModelOptions]="{standalone: true}" ></angular-editor>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <label>Product Short Description</label>
+                                            
+                                                <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="shortDescription" [ngModelOptions]="{standalone: true}" ></angular-editor>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <label>Enter HSN / SAC Code</label>
+                                            <input [(ngModel)]="hsn" type="text" class="form-control" id="hsn" placeholder="Enter HSN / SAC Code" [ngModelOptions]="{standalone: true}">
+                                            <p class="invalid-error" *ngIf="errorMsg.hsn">{{errorMsg.hsn}}
+                                            </p>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label>Select Tax</label>
+                                            <select [(ngModel)]="taxId"  class="form-control" (ngModelChange)="onChangeTax($event)" [ngModelOptions]="{standalone: true}">
+                                                <option [ngValue] = "0">Select Tax</option>
+                                                <option *ngFor="let country of taxList" [ngValue]="country.tax_id">{{country.tax_percentage}}</option>
+                                             </select>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <label>Select Region</label>
+                                            <angular2-multiselect [(ngModel)]="regionArray" [data]="regionList" (keyup.enter)="openSize($event)" [settings]="sizeSettings" [ngModelOptions]="{standalone: true}" (onDeSelectAll)="onDeSelectAllSizes($event)" #sizeDropDown></angular2-multiselect>
+                                            <p class="invalid-error" *ngIf="errorMsg.region">{{errorMsg.region}}
+                                            </p>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <label>Select Flavour</label>
+                                            <angular2-multiselect [(ngModel)]="flavourArray" [data]="flavourList" (keyup.enter)="openFlavour($event)" [settings]="flavourSettings" [ngModelOptions]="{standalone: true}" (onDeSelectAll)="onDeSelectAllFlavour($event)" #flavourDropDown></angular2-multiselect>
+                                            <p class="invalid-error" *ngIf="errorMsg.flavour_id">{{errorMsg.flavour_id}}
+                                            </p>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <label>Enter Preparation Hours</label>
+                                            <input [(ngModel)]="preparation" type="text" class="form-control" id="hsn" placeholder="Enter Preparation Hours" [ngModelOptions]="{standalone: true}">
+                                            <p class="invalid-error" *ngIf="errorMsg.preparation">{{errorMsg.preparation}}
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <label>New Product</label>
+                                                <select [(ngModel)]="newProduct"  class="form-control" (ngModelChange)="onChangeNew($event)" [ngModelOptions]="{standalone: true}">
+                                                    <option [ngValue]="1">Yes</option>
+                                                    <option [ngValue]="0">No</option>
+                                                 </select>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <label>Best Selling</label>
+                                                <select [(ngModel)]="bestSelling"  class="form-control" (ngModelChange)="onChangeBest($event)" [ngModelOptions]="{standalone: true}">
+                                                    <option [ngValue]="1">Yes</option>
+                                                    <option [ngValue]="0">No</option>
+                                                 </select>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <label>Start Time</label>
+                                            <input [(ngModel)]="startTime"  class="form-control" [ngModelOptions]="{standalone: true}" [ngxTimepicker]="picker">
+                                            <ngx-material-timepicker #picker></ngx-material-timepicker>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <label>End Time</label>
+                                            <input [(ngModel)]="endTime"  class="form-control" [ngModelOptions]="{standalone: true}" [ngxTimepicker]="picker1">
+                                            <ngx-material-timepicker #picker1></ngx-material-timepicker>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <label>Base Price</label>
+                                            <input [(ngModel)]="basePrice"  class="form-control" [ngModelOptions]="{standalone: true}">
+                                            
+                                        </div>
+
+                                        <div class="form-group col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h3>Add Multiple Variation:</h3>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button  [class.d-none]="clickValue == weightLength" type="button" (click)="addvalue()" class="btn btn-primary">Add More</button>
+                                                </div>
+                                            </div>
+                                            <table class="table table-bordered">
+                                                <!-- <tr>
+                                                  <th colspan="2">Add Multiple Variation:</th>
+                                                  <th [class.d-none]="clickValue == weightLength" width="150px"><button type="button" (click)="addvalue()" class="btn btn-primary">Add More</button></th>
+                                                </tr> --> 
+                                                <tr *ngFor="let quantity of variation; let i=index">
+                                                  <td>
+                                                    <div class="form-group">
+                                                        <label>Select Weight</label>
+                                                        <select [(ngModel)]="quantity.weight" #name="ngModel"
+                                                        name="weight{{ i }}"  class="form-control" [ngModelOptions]="{standalone: true}">
+                                                            <option *ngFor="let country of weightList" [ngValue]="country.weight_id">{{country.weight_name}}</option>
+                                                         </select>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                      Egg:
+                                                      <input type="text"  #name="ngModel"
+                                                      name="egg{{ i }}"  [(ngModel)]="quantity.egg" class="form-control" [ngModelOptions]="{standalone: true}">
+                                                  </td>
+                                                  <td>
+                                                    EggLess:
+                                                    <input type="text"  #name="ngModel"
+                                                    name="eggLess{{ i }}" [(ngModel)]="quantity.eggLess" class="form-control" [ngModelOptions]="{standalone: true}">
+                                                </td>
+                                                <td>
+                                                    SKU:
+                                                    <input type="text"  #name="ngModel"
+                                                    name="sku{{ i }}" [(ngModel)]="quantity.sku" class="form-control" [ngModelOptions]="{standalone: true}">
+                                                </td>
+                                               
+                                                  <td>
+                                                      <button (click)="removevalue(i)" class="btn btn-danger">Remove</button>
+                                                      
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                        </div>
+                                        <div class="col-4">
+                                            <button class="btn btn-primary" (click)="update(productId)">Update Product</button>
+                                        </div>
+                                      
+            
+                                    </div>
+                                       
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        <app-footer></app-footer>
+    </div>
+</div>

@@ -1,0 +1,211 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+  <div class="page">
+    <div
+      class="page-main"
+      [class.opacity-2]="viewBox"
+      [class.opacity-10]="!viewBox"
+    >
+      <div class="app-content">
+        <div class="side-app">
+          <div class="page-header ">
+            <h4 class="page-title mx-auto">Gallery Baby Wash</h4>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                      <div class="form-group col-12 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label> babywashs Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="baby_textcontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-5">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updatebabywahtext()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+
+
+
+
+
+
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">babywash Portrait</label>
+                      <img [src]="baby_portrait" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'babywashportrait'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">babywash Image 2 </label>
+                      <img [src]="baby_img_2" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'babywash2'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">babywash Image 3 </label>
+                      <img [src]="baby_img_3" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'babywash3'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">babywash Image 4 </label>
+                      <img [src]="baby_img_4" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'babywash4'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">babywash Image 5 </label>
+                      <img [src]="baby_img_5" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'babywash5'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">babywash Image 6 </label>
+                      <img [src]="baby_img_6" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'babywash6'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">babywash Image 7 </label>
+                      <img [src]="baby_img_7" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'babywash7'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">babywash Image 8</label>
+                      <img [src]="baby_img_8" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'babywash8'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">babywash Image 9 </label>
+                      <img [src]="baby_img_9" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'babywash9'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">babywash Image 10 </label>
+                      <img [src]="baby_img_10" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'babywash10'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">babywash Image 11 </label>
+                      <img [src]="baby_img_11" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'babywash11'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">babywash Image 12</label>
+                      <img [src]="baby_img_12" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'babywash12'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

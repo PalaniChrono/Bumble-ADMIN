@@ -1,0 +1,138 @@
+<div class="app sidebar-mini">
+    <div class="page">
+        <div class="page-main">
+            <aside class="app-sidebar" #scrollMe>
+                <div class="app-sidebar__user">
+                    <div class="dropdown user-pro-body text-center">
+                        <div class="user-pic">
+                            <img src="assets/images/boy-face.png" alt="user-img" class="avatar-xl rounded-circle mb-1">
+                        </div>
+                        <div class="user-info">
+                            <h6 class=" mb-1 text-light"><b>{{user | titlecase}}</b></h6>
+                            <!-- <span class="text-center user-semi-title text-white">( {{roleName | titlecase}} )</span> -->
+                        </div>
+                    </div>
+                </div>
+                <ul class="side-menu">
+                    <!-- <li class="slide" routerLinkActive="is-expandetd">
+                        <a class="side-menu__item" href="javascript:void(0);"  routerLinkActive="active"   data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tag"></i><span class="side-menu__label">Home</span></a>
+                        <ul class="slide-menu">
+                             <li>
+                                <a class="slide-item" routerLink="/HomeSectionOne"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                    true}" href="javascript:void(0);">
+                                <span class="side-menu__label">Carousel Banner</span></a>
+                            </li>
+                            <li>
+                                <a class="slide-item"  routerLink="/HomesectionTwo"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                    true}"href="javascript:void(0);">
+                                <span class="side-menu__label">Home Card-1</span></a>
+                            </li>
+                            <li>
+                                <a class="slide-item" routerLink="/HomesectionThree" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                    true}"  href="javascript:void(0);">
+                                <span class="side-menu__label">Home Card-2</span></a>
+                            </li>
+                            <li>
+                                <a class="slide-item" routerLink="/HomesectionFour"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                    true}" href="javascript:void(0);">
+                                <span class="side-menu__label">Home Card-3</span></a>
+                            </li>
+                            <li>
+                              <a class="slide-item"  routerLink="/hometextarea" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                  true}" href="javascript:void(0);">
+                              <span class="side-menu__label">Home Text Area</span></a>
+                          </li>
+
+                        </ul>
+                    </li> -->
+                    <li class="slide" routerLinkActive="is-expanded">
+                        <a class="side-menu__item"  href="javascript:void(0);" routerLinkActive="active" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tag"></i><span class="side-menu__label">Home</span></a>
+                        <ul class="slide-menu">
+                            <li>
+                               <a class="slide-item" routerLink="/HomeSectionOne"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                   true}" href="javascript:void(0);">
+                               <span class="side-menu__label">Carousel Banner</span></a>
+                           </li>
+                           <li>
+                               <a class="slide-item"  routerLink="/HomesectionTwo"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                   true}"href="javascript:void(0);">
+                               <span class="side-menu__label">Home Card-1</span></a>
+                           </li>
+                           <li>
+                               <a class="slide-item" routerLink="/HomesectionThree" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                   true}"  href="javascript:void(0);">
+                               <span class="side-menu__label">Home Card-2</span></a>
+                           </li>
+                           <li>
+                               <a class="slide-item" routerLink="/HomesectionFour"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                   true}" href="javascript:void(0);">
+                               <span class="side-menu__label">Home Card-3</span></a>
+                           </li>
+                           <li>
+                             <a class="slide-item"  routerLink="/hometextarea" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                 true}" href="javascript:void(0);">
+                             <span class="side-menu__label">Home Text Area</span></a>
+                         </li>
+
+                       </ul>
+                    </li>
+                    <li class="slide" routerLinkActive="is-expanded">
+                        <a class="side-menu__item"  href="javascript:void(0);" routerLinkActive="active" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tag"></i><span class="side-menu__label">Gallery</span></a>
+                        <ul class="slide-menu">
+                            <li><a class="slide-item" routerLink="/coursesSectionOne" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                true}"   href="javascript:void(0);">
+                                <span class="side-menu__label">Weddings</span></a></li>
+
+                            <li><a class="slide-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                true}"   href="javascript:void(0);"  routerLink="/coursesSectionTwo" >
+                                <span class="side-menu__label">OutDoors</span></a></li>
+
+
+                            <li><a class="slide-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                true}"  href="javascript:void(0);"  routerLink="/coursesSectionThree"  >
+                                <span class="side-menu__label">Baby Wash</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li class="slide" routerLinkActive="is-expanded">
+                        <a class="side-menu__item" href="javascript:void(0);" routerLink="/trainerSectionOne" routerLinkActive="active" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tag"></i><span class="side-menu__label">Services</span></a>
+                    <li class="slide" routerLinkActive="is-expanded" routerLink="/testimonial-list">
+                        <a class="side-menu__item" routerLinkActive="active" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tag"></i><span class="side-menu__label">Contact Us</span></a>
+
+                    </li>
+                    <li class="slide" routerLinkActive="is-expanded" routerLink="/testimony">
+                        <a class="side-menu__item" routerLinkActive="active" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tag"></i><span class="side-menu__label">Testimony</span></a>
+                    </li>
+
+                    <li class="slide" routerLinkActive="is-expanded"  >
+                        <a class="side-menu__item" routerLinkActive="active" routerLink="/othercoursesSection1"  data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tag"></i><span class="side-menu__label">Careers</span></a>
+                         <!--<ul class="slide-menu">
+
+
+                            <li><a class="slide-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                true}" routerLink="/othercoursesSection1" href="javascript:void(0);">
+                                <span class="side-menu__label">SECTION 1</span></a></li>
+                                <li><a class="slide-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                    true}" routerLink="/othercoursesSection2" href="javascript:void(0);">
+                                    <span class="side-menu__label">SECTION 2</span></a></li>
+
+
+                            <li><a class="slide-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                                true}" routerLink="/othercoursesSection3" href="javascript:void(0);">
+                                <span class="side-menu__label">SECTION 3</span></a></li>
+
+
+
+
+                        </ul>-->
+                    </li>
+
+                </ul>
+            </aside>
+        </div>
+    </div>
+</div>
+
+
+
+

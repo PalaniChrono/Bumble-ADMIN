@@ -1,0 +1,10 @@
+.angular-editor-textarea {
+    max-height: 300px !important;
+    overflow: scroll !important;
+}
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 900px !important;
+    margin: 1.75rem auto;
+}
+}

@@ -1,0 +1,43 @@
+.product-img {
+    width: 100px;
+    height: auto;
+}
+
+.track {
+    display: flex;
+}
+
+.track-input {
+    width: 60%;
+    margin-right: 10px;
+}
+
+.disp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.disp select {
+    width: 80%;
+}
+
+.disp button {
+    width: 130px;
+}
+
+.dem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.dem .widty{
+    width: 100%;
+}
+
+.dem .disp{
+    align-items: flex-end;
+}

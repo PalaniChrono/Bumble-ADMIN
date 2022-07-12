@@ -1,0 +1,331 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+  <div class="page">
+    <div
+      class="page-main"
+      [class.opacity-2]="viewBox"
+      [class.opacity-10]="!viewBox"
+    >
+      <div class="app-content">
+        <div class="side-app">
+          <div class="page-header">
+            <h4 class="page-title">Create Product</h4>
+          </div>
+
+
+          <!-- <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <form autocomplete="off">
+                    <div class="row">
+                      <div class="form-group col-6">
+                        <label>SECTION-2-Features</label>
+                        <input
+                          [(ngModel)]="sectionOneGreyText"
+                          type="text"
+                          class="form-control"
+                          id="productName"
+                          placeholder="Enter Product Name"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
+                        <p class="invalid-error" *ngIf="errorMsg.product_name">
+                          {{ errorMsg.product_name }}
+                        </p>
+                      </div>
+
+                      <div class="form-group col-6">
+                        <label>Product Short Description</label>
+
+                        <angular-editor
+                          [placeholder]="'Enter text here...'"
+                          [(ngModel)]="shortDescription"
+                          [ngModelOptions]="{ standalone: true }"
+                        ></angular-editor>
+                      </div>
+
+
+                      <div class="col-2">
+
+                        <button class="btn btn-primary w-50 rounded" (click)="store()">
+                         Edit
+                        </button>
+                      </div>
+                      <div class="col-2">
+
+                        <button class="btn btn-success w-50  rounded" (click)="store()">
+                        Update
+                        </button>
+                      </div>
+                      <div class="col-2">
+
+                        <button class="btn btn-warning w-50  rounded" (click)="store()">
+                        Delete
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <form autocomplete="off">
+                    <div class="row">
+                      <div class="form-group col-6">
+                        <label>SECTION-3-text</label>
+                        <input
+                          [(ngModel)]="sectionOneGreyText"
+                          type="text"
+                          class="form-control"
+                          id="productName"
+                          placeholder="Enter Product Name"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
+                        <label class="mt-2">SECTION-3-image</label>
+                        <input
+                          [(ngModel)]="sectionOneGreyText"
+                          type="text"
+                          class="form-control"
+                          id="productName"
+                          placeholder="Enter Product Name"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
+                        <p class="invalid-error" *ngIf="errorMsg.product_name">
+                          {{ errorMsg.product_name }}
+                        </p>
+                      </div>
+
+                      <div class="form-group col-6">
+                        <label>Product Short Description</label>
+
+                        <angular-editor
+                          [placeholder]="'Enter text here...'"
+                          [(ngModel)]="shortDescription"
+                          [ngModelOptions]="{ standalone: true }"
+                        ></angular-editor>
+                      </div>
+
+
+                      <div class="col-2">
+
+                        <button class="btn btn-primary w-50 rounded" (click)="store()">
+                         Edit
+                        </button>
+                      </div>
+                      <div class="col-2">
+
+                        <button class="btn btn-success w-50  rounded" (click)="store()">
+                        Update
+                        </button>
+                      </div>
+                      <div class="col-2">
+
+                        <button class="btn btn-warning w-50  rounded" (click)="store()">
+                        Delete
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <form autocomplete="off">
+                    <div class="row">
+                      <div class="form-group col-6">
+                        <label>SECTION-4-image</label>
+                        <input
+                          [(ngModel)]="sectionOneGreyText"
+                          type="text"
+                          class="form-control"
+                          id="productName"
+                          placeholder="Enter Product Name"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
+                        <p class="invalid-error" *ngIf="errorMsg.product_name">
+                          {{ errorMsg.product_name }}
+                        </p>
+                      </div>
+
+                      <div class="form-group col-6">
+                        <label>Product Short Description</label>
+
+                        <angular-editor
+                          [placeholder]="'Enter text here...'"
+                          [(ngModel)]="shortDescription"
+                          [ngModelOptions]="{ standalone: true }"
+                        ></angular-editor>
+                      </div>
+
+
+                      <div class="col-2">
+
+                        <button class="btn btn-primary w-50 rounded" (click)="store()">
+                         Edit
+                        </button>
+                      </div>
+                      <div class="col-2">
+
+                        <button class="btn btn-success w-50  rounded" (click)="store()">
+                        Update
+                        </button>
+                      </div>
+                      <div class="col-2">
+
+                        <button class="btn btn-warning w-50  rounded" (click)="store()">
+                        Delete
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <form autocomplete="off">
+                    <div class="row">
+                      <div class="form-group col-6">
+                        <label>SECTION-5-text</label>
+                        <input
+                          [(ngModel)]="sectionOneGreyText"
+                          type="text"
+                          class="form-control"
+                          id="productName"
+                          placeholder="Enter Product Name"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
+                        <label class="mt-2">SECTION-5-image</label>
+                        <input
+                          [(ngModel)]="sectionOneGreyText"
+                          type="text"
+                          class="form-control"
+                          id="productName"
+                          placeholder="Enter Product Name"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
+                        <p class="invalid-error" *ngIf="errorMsg.product_name">
+                          {{ errorMsg.product_name }}
+                        </p>
+                      </div>
+
+                      <div class="form-group col-6">
+                        <label>Product Short Description</label>
+
+                        <angular-editor
+                          [placeholder]="'Enter text here...'"
+                          [(ngModel)]="shortDescription"
+                          [ngModelOptions]="{ standalone: true }"
+                        ></angular-editor>
+                      </div>
+
+
+                      <div class="col-2">
+
+                        <button class="btn btn-primary w-50 rounded" (click)="store()">
+                         Edit
+                        </button>
+                      </div>
+                      <div class="col-2">
+
+                        <button class="btn btn-success w-50  rounded" (click)="store()">
+                        Update
+                        </button>
+                      </div>
+                      <div class="col-2">
+
+                        <button class="btn btn-warning w-50  rounded" (click)="store()">
+                        Delete
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <form autocomplete="off">
+                    <div class="row">
+                      <div class="form-group col-6">
+                        <label>SECTION-6-text</label>
+                        <input
+                          [(ngModel)]="sectionOneGreyText"
+                          type="text"
+                          class="form-control"
+                          id="productName"
+                          placeholder="Enter Product Name"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
+                        <label class="mt-2">SECTION-6-image</label>
+                        <input
+                          [(ngModel)]="sectionOneGreyText"
+                          type="text"
+                          class="form-control"
+                          id="productName"
+                          placeholder="Enter Product Name"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
+                        <p class="invalid-error" *ngIf="errorMsg.product_name">
+                          {{ errorMsg.product_name }}
+                        </p>
+                      </div>
+
+                      <div class="form-group col-6">
+                        <label>Product Short Description</label>
+
+                        <angular-editor
+                          [placeholder]="'Enter text here...'"
+                          [(ngModel)]="shortDescription"
+                          [ngModelOptions]="{ standalone: true }"
+                        ></angular-editor>
+                      </div>
+
+
+                      <div class="col-2">
+
+                        <button class="btn btn-primary w-50 rounded" (click)="store()">
+                         Edit
+                        </button>
+                      </div>
+                      <div class="col-2">
+
+                        <button class="btn btn-success w-50  rounded" (click)="updateProductStocks()">
+                        Update
+                        </button>
+                      </div>
+                      <div class="col-2">
+
+                        <button class="btn btn-warning w-50  rounded" (click)="destroy()">
+                        Delete
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

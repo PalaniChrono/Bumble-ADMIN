@@ -1,0 +1,51 @@
+<div class="container">
+  
+    <h1>Angular FormArray Example - ItSolutionStuff.com</h1>
+    
+    <form  (ngSubmit)="onSubmit()">
+      
+      <table class="table table-bordered">
+        <tr>
+          <th colspan="2">Add Multiple Quantity:</th>
+          <th width="150px"><button type="button" (click)="addvalue()" class="btn btn-primary">Add More</button></th>
+        </tr>
+        <tr *ngFor="let quantity of variation; let i=index">
+          <td>
+            <div class="form-group">
+                <label>Select Weight</label>
+                <select [(ngModel)]="quantity.weight" #name="ngModel"
+                name="weight{{ i }}"  class="form-control" (change)="onChange($event)" [ngModelOptions]="{standalone: true}">
+                    <option *ngFor="let country of pincodeList" [ngValue]="country.weight_id">{{country.weight_name}}</option>
+                 </select>
+            </div>
+          </td>
+          <td>
+              Egg:
+              <input type="text"  #name="ngModel"
+              name="egg{{ i }}"  [(ngModel)]="quantity.egg" class="form-control" [ngModelOptions]="{standalone: true}">
+          </td>
+          <td>
+            EggLess:
+            <input type="text"  #name="ngModel"
+            name="eggLess{{ i }}" [(ngModel)]="quantity.eggLess" class="form-control" [ngModelOptions]="{standalone: true}">
+        </td>
+        <td>
+            SKU:
+            <input type="text"  #name="ngModel"
+            name="sku{{ i }}" [(ngModel)]="quantity.sku" class="form-control" [ngModelOptions]="{standalone: true}">
+        </td>
+          <td>
+              <button (click)="removevalue(i)" class="btn btn-danger">Remove</button>
+          </td>
+        </tr>
+      </table>
+     
+      <button type="submit" (click)="onSubmit()" class="btn btn-success">Submit</button>
+      
+    </form>
+      
+    <br/>
+    {{variation | json}}
+
+    
+  </div>

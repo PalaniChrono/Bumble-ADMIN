@@ -1,0 +1,117 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+  <div class="page">
+    <div
+      class="page-main"
+      [class.opacity-2]="viewBox"
+      [class.opacity-10]="!viewBox"
+    >
+      <div class="app-content">
+        <div class="side-app">
+          <div class="page-header ">
+            <h4 class="page-title mx-auto">Text Area</h4>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+
+
+
+
+
+
+
+
+
+
+
+                   <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                        <div class="form-group col-6  d-flex flex-column justify-content-start  align-items-center">
+                            <label>Big Size Text</label>
+
+                            <textarea class="border border-dark w-100 "
+                              [placeholder]="'Card Heading'"
+                              [(ngModel)]="bigsizetext"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+
+                      <div class="form-group col-6 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label>Video URL </label>
+
+                            <textarea class="border border-dark w-100"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="videourl"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="form-group col-12 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label>Who Are We Content </label>
+
+                            <textarea class="border border-dark w-100"
+                              [placeholder]="'Enter text here...'"  rows="6"
+                              [(ngModel)]="whoarewecontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-12 ">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updatehometextarea()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+
+
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="modal" tabindex="-1" role="dialog"  [class.d-block]="show" [class.d-none]="!show" style=" z-index: 1000000; ">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content" style="border: 2px solid #ffdf06;">
+            <div class="modal-header">
+              <!-- <h5 class="modal-title" id="exampleModalLabel">ATTENTION</h5> -->
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closepopup()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" style="color: black; font-size: large; height: 5em; z-index: 10000;">
+             Maximum Length of Card Description is "555" Letters
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

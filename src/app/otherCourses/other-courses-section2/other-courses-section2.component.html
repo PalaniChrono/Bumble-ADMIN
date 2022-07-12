@@ -1,0 +1,212 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+  <div class="page">
+    <div
+      class="page-main"
+      [class.opacity-2]="viewBox"
+      [class.opacity-10]="!viewBox"
+    >
+      <div class="app-content">
+        <div class="side-app">
+          <div class="page-header">
+            <h4 class="page-title">Other Courses Section-1</h4>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <form autocomplete="off">
+                    <h3 class="text-center">SECTION ONE</h3>
+                    <div class="row">
+                      <div class="form-group col-6">
+                        <div class="form-group">
+                          <label>Section One-Header</label>
+                          <textarea
+                            [(ngModel)]="sectiThreeHeader1 "
+                            type="text"
+                            class="form-control"
+                            id="productName"
+                            placeholder="Enter Section One Heading"
+                            [ngModelOptions]="{ standalone: true }"
+                          ></textarea>
+                          <p
+                            class="invalid-error"
+                            *ngIf="errorMsg.product_name"
+                          >
+                            {{ errorMsg.product_name }}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="form-group col-6">
+                        <div class="form-group">
+                          <label>Other Course SUB-HEADING-1</label>
+                          <textarea
+                            [(ngModel)]="secthreecour_subhead1 "
+                            type="text"
+                            class="form-control"
+                            id="productName"
+                            placeholder="Enter Sub Heading"
+                            [ngModelOptions]="{ standalone: true }"
+                          ></textarea>
+                          <p
+                            class="invalid-error"
+                            *ngIf="errorMsg.product_name"
+                          >
+                            {{ errorMsg.product_name }}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="form-group col-6">
+                        <div class="form-group">
+                          <label>Course Details</label>
+                          <angular-editor
+                            [(ngModel)]="secThreeCour_details"
+                            type="text"
+                            class="form-control"
+                            id="productName"
+                            placeholder="Enter Product Name"
+                            [ngModelOptions]="{ standalone: true }"
+                          ></angular-editor>
+                          <p
+                            class="invalid-error"
+                            *ngIf="errorMsg.product_name"
+                          >
+                            {{ errorMsg.product_name }}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="form-group col-6">
+                        <div class="form-group">
+                          <label>Course Image</label>
+                          <textarea
+                            [(ngModel)]="secThreecour_img"
+                            type="text"
+                            class="form-control"
+                            id="productName"
+                            placeholder="Enter Product Name"
+                            [ngModelOptions]="{ standalone: true }"
+                          ></textarea>
+                          <p
+                            class="invalid-error"
+                            *ngIf="errorMsg.product_name"
+                          >
+                            {{ errorMsg.product_name }}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h3 class="text-center">READ MORE SECTION</h3>
+                    <div class="row">
+                      <div class="form-group col-6">
+                        <div class="form-group">
+                          <label>COURSE SUMMARY</label>
+                          <angular-editor
+                            [(ngModel)]="courOneSummary"
+                            type="text"
+                            class="form-control"
+                            id="productName"
+                            placeholder="Enter Product Name"
+                            [ngModelOptions]="{ standalone: true }"
+                          ></angular-editor>
+                          <p
+                            class="invalid-error"
+                            *ngIf="errorMsg.product_name"
+                          >
+                            {{ errorMsg.product_name }}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="form-group col-6">
+                        <div class="form-group">
+                          <label>Header</label>
+                          <angular-editor
+                            [(ngModel)]="courOneHead1"
+                            type="text"
+                            class="form-control"
+                            id="productName"
+                            placeholder="Enter Product Name"
+                            [ngModelOptions]="{ standalone: true }"
+                          ></angular-editor>
+                          <p
+                            class="invalid-error"
+                            *ngIf="errorMsg.product_name"
+                          >
+                            {{ errorMsg.product_name }}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="form-group col-6">
+                        <div class="form-group">
+                          <label>Section FIRST</label>
+                          <angular-editor
+                            [(ngModel)]="firstsec"
+                            type="text"
+                            class="form-control"
+                            id="productName"
+                            placeholder="Enter Product Name"
+                            [ngModelOptions]="{ standalone: true }"
+                          ></angular-editor>
+                          <p
+                            class="invalid-error"
+                            *ngIf="errorMsg.product_name"
+                          >
+                            {{ errorMsg.product_name }}
+                          </p>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+                      <div class="form-group col-6">
+                        <div class="form-group">
+                          <label>IMAGE section</label>
+                          <angular-editor
+                            [(ngModel)]="certificateimg"
+                            type="text"
+                            class="form-control"
+                            id="productName"
+                            placeholder="Enter Product Name"
+                            [ngModelOptions]="{ standalone: true }"
+                          ></angular-editor>
+                          <p
+                            class="invalid-error"
+                            *ngIf="errorMsg.product_name"
+                          >
+                            {{ errorMsg.product_name }}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <button
+                          class="btn btn-success rounded mx-auto"
+                          (click)="updateSecTwo()"
+                        >
+                          Update
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

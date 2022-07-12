@@ -1,0 +1,228 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+  <div class="page">
+    <div
+      class="page-main"
+      [class.opacity-2]="viewBox"
+      [class.opacity-10]="!viewBox"
+    >
+      <div class="app-content">
+        <div class="side-app">
+          <div class="page-header ">
+            <h4 class="page-title mx-auto">Gallery Wedding</h4>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                      <div class="form-group col-12 ">
+
+
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label> All Section  Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="all_textContent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div class="col-12 mb-5 mt-5">
+                          <button class="btn btn-success   rounded mx-auto" (click)="updateallSectext()">
+                          Update
+                          </button>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label> Wedding Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="wedding_textcontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-5 mt-5">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updateweddingtext()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+
+
+
+
+
+
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Wedding Portrait</label>
+                      <img [src]="wed_portrait" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'weddingpotrait'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Wedding Image 2 </label>
+                      <img [src]="wed_img_2" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'wedding2'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Wedding Image 3 </label>
+                      <img [src]="wed_img_3" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'wedding3'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Wedding Image 4 </label>
+                      <img [src]="wed_img_4" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'wedding4'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Wedding Image 5 </label>
+                      <img [src]="wed_img_5" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'wedding5'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Wedding Image 6 </label>
+                      <img [src]="wed_img_6" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'wedding6'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Wedding Image 7 </label>
+                      <img [src]="wed_img_7" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'wedding7'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Wedding Image 8</label>
+                      <img [src]="wed_img_8" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'wedding8'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Wedding Image 9 </label>
+                      <img [src]="wed_img_9" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'wedding9'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Wedding Image 10 </label>
+                      <img [src]="wed_img_10" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'wedding10'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Wedding Image 11 </label>
+                      <img [src]="wed_img_11" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'wedding11'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Wedding Image 12</label>
+                      <img [src]="wed_img_12" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'wedding12'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,105 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+  <div class="page">
+
+      <div class="app-content">
+        <div class="side-app">
+          <div class="page-header">
+            <h4 class="page-title">Testimony Details</h4>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <form autocomplete="off">
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label>Testimonial Content</label>
+
+                            <angular-editor
+                              [placeholder]="'Enter Content Here...'"
+                              [(ngModel)]="content"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></angular-editor>
+                          </div>
+
+
+
+
+
+                      <div class="form-group col-6">
+                        <label class="pr-3"> User Image</label>
+
+                       <button [routerLink]="['/testimonialimageupload' ,'testimonial-list',id]" class="btn btn-danger btn-lg  btn-round waves-effect waves-light m-1 bill_btn" data-toggle="modal"  [ngClass]="{'btn-loading disabled': loadingBtn}">Edit</button><br>
+                       <img src="{{image}}" alt="">
+                      </div>
+
+
+                      <div class="form-group col-6">
+                        <label> User Name</label>
+
+                        <angular-editor
+                          [placeholder]="'Enter the user name'"
+                          [(ngModel)]="name"
+                          [ngModelOptions]="{ standalone: true }"
+                        ></angular-editor>
+                      </div>
+
+
+
+
+                      <div class="form-group col-6">
+                        <label> User Role</label>
+
+                        <angular-editor
+                          [placeholder]="'Enter the user role'"
+                          [(ngModel)]="role"
+                          [ngModelOptions]="{ standalone: true }"
+                        ></angular-editor>
+                      </div>
+
+
+                      <div class="form-group col-6">
+                        <label> Review Star</label>
+
+                        <angular-editor
+                          [placeholder]="'Enter the star'"
+                          [(ngModel)]="reviewStar"
+                          [ngModelOptions]="{ standalone: true }"
+                        ></angular-editor>
+                      </div>
+
+
+
+                      <div class="col-12 ">
+                        <button class="btn btn-success   rounded mx-auto" (click)="update()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+
+
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <app-footer></app-footer>
+
+  </div>
+</div>

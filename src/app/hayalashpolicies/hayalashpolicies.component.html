@@ -1,0 +1,78 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+  <div class="page">
+    <div
+      class="page-main"
+      [class.opacity-2]="viewBox"
+      [class.opacity-10]="!viewBox"
+    >
+      <div class="app-content">
+        <div class="side-app">
+          <div class="page-header">
+            <h4 class="page-title">Course Policies</h4>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <form autocomplete="off">
+                    <h3 class="text-center">SECTION ONE</h3>
+                    <div class="row">
+                      <div class="form-group col-12">
+                        <div class="form-group">
+                          <label>SectionOne-Header</label>
+                          <angular-editor
+                            [(ngModel)]="coursepolicy"
+                            type="text"
+                            class="form-control"
+                            id="productName"
+                            placeholder="Enter Product Name"
+                            [ngModelOptions]="{ standalone: true }"
+                          ></angular-editor>
+                          <p
+                            class="invalid-error"
+                            *ngIf="errorMsg.product_name"
+                          >
+                            {{ errorMsg.product_name }}
+                          </p>
+                        </div>
+                      </div>
+
+                      
+                      
+
+                      
+                    </div>
+                    
+                   
+                    <div class="row">
+                     
+                      
+                      <div class="col-12">
+                        <button
+                          class="btn btn-success rounded mx-auto"
+                          (click)="updateSecOne()"
+                        >
+                          Update
+                        </button>
+                      </div>
+                      
+                    </div>
+
+                   
+
+                   
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

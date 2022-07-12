@@ -1,0 +1,57 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+  <div class="page">
+    <div
+      class="page-main"
+      [class.opacity-2]="viewBox"
+      [class.opacity-10]="!viewBox"
+    >
+      <div class="app-content">
+        <div class="side-app">
+          <div class="page-header">
+            <h4 class="page-title mx-auto"> Careers</h4>
+          </div>
+          <div class="container">
+            <div class="card" >
+              <div class="card-header" style="color: black;">
+                  <div class="card-title mx-auto">Number of Contact Us - ( {{orderDetails.length}} )</div>
+              </div>
+              <div class="card-body">
+                  <div class="table-responsive">
+                      <table class="table table-striped table-bordered text-nowrap w-100 text-center align-middle">
+                          <thead>
+                              <tr>
+                                  <th class="wd-10p">S.no</th>
+                                  <th class="wd-10p">Name</th>
+                                  <th class="wd-10p">Phone</th>
+
+                                  <!-- <th class="wd-10p">Confirmed/Not</th> -->
+
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let order of orderDetails| paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+                                  <td>{{(i+1) + ((p-1) * 5)}}</td>
+                                  <td>{{order.name	}}</td>
+                                  <td>{{order.mobile}}</td>
+
+                                  <!-- <td><mat-slide-toggle style="color: black;" [(ngModel)]="confirmed" onchange="checked()">Client {{confirmed}} {{(i+1) + ((p-1) * 5)}}</mat-slide-toggle></td> -->
+
+                              </tr>
+                          </tbody>
+                      </table>
+                      <pagination-controls *ngIf="orderDetails.length > 5" (pageChange)="p = $event"></pagination-controls>
+                  </div>
+              </div>
+          </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

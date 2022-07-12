@@ -1,0 +1,184 @@
+<app-header> </app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+    <div class="page">
+        <div class="page-main">
+            <div class="app-content">
+                <div class="side-app">
+                    <div class="page-header">
+                        <h4 class="page-title">Latest Arrivals</h4>
+                    </div>
+                    <div class="card">
+                        <div class="card-header-1">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="card-title">
+                                        <button class="btn btn-success create-btn-radius" (click)="openModalBox()"><i class="fa fa-plus-circle icon-space" aria-hidden="true"></i>Create Latest Arrival</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card p-4" [class.h-250]="loading" *ngIf="latestArrivalList.length == 0">
+                                <ngx-loading [show]="loading"></ngx-loading>
+                                <div class="card-header-1">
+                                    <h4 class="text-center">Latest arrivals is not available</h4>
+                                </div>
+                            </div>
+                            <div class="card"  *ngIf="latestArrivalList.length != 0" >
+                                <div class="card-header">
+                                    <div class="card-title">List of Ad Banner - ( {{latestArrivalList.length}} )</div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered text-nowrap w-100 text-center align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th class="wd-15p">S.No</th>
+                                                    <th class="wd-15p">Name</th>
+                                                    <th class="wd-15p">Status</th>
+                                                    <th class="wd-15p">Edit</th>
+                                                    <th class="wd-15p">Edit Image</th>
+                                                    <th class="wd-10p">Value</th>
+                                                    <th class="wd-25p">Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let latestArrival of latestArrivalList| paginate: { itemsPerPage: 10, currentPage: sno };let i = index">
+                                                    <td>{{(i+1) + ((sno-1) * 10)}}</td>
+                                                    <td>{{latestArrival.latest_arrival_name | titlecase}}</td>
+                                                    <td>
+                                                        <span class=" text-success status_icon m-1 " *ngIf="latestArrival.active_status == 1"><i class="fa fa-smile-o mr-2 mobile-icon" aria-hidden="true"></i><span class="window-text"> Active</span></span>
+                                                        <span class=" text-danger status_icon m-1 " *ngIf="latestArrival.active_status == 0"><i class="fa fa-frown-o mr-2 mobile-icon" aria-hidden="true"></i><span class="window-text"> In-Active</span></span>
+                                                    </td>
+                                                    <td><button *ngIf="latestArrival.active_status == 1" class="btn btn-server btn-success" (click)="openModalBox(latestArrival.id)"><i class="fa fa-pencil-square-o fa-1x mobile-icon" ></i><span class="window-text">Edit {{latestArrival.banner_name}}</span> </button>
+                                                        <button class="btn btn-server btn-danger" disabled *ngIf="latestArrival.active_status == 0"><i class="fa fa-pencil-square-o fa-1x mobile-icon" ></i><span class="window-text">Edit {{latestArrival.banner_name}}</span> </button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-server btn-success" [routerLink]="['/latest-arrivals-image', latestArrival.id]"><i
+                                                            class="fa fa-pencil-square-o fa-1x mobile-icon"></i><span
+                                                            class="window-text">Image </span></button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" *ngIf="latestArrival.active_status == 0" class="btn btn-success btn-latestArrival btn-radius waves-effect waves-light m-1" (click)="latestArrivalSwitch(latestArrival.id)"><i class="fa fa-check-circle mobile-icon"></i><span class="window-text">Activate this Arrival</span></button>
+                                                        <button type="button" class="btn btn-danger btn-latestArrival btn-radius waves-effect waves-light m-1" *ngIf="latestArrival.active_status == 1" (click)="latestArrivalSwitch(latestArrival.id)"> <i class="fa fa-times-circle mobile-icon"></i><span class="window-text">De-Activate this Banner</span></button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-server btn-danger" (click)="destroy(latestArrival.id)"><i class="fa fa-trash-o fa-1x mobile-icon"></i> <span class="window-text">Delete</span></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    - <pagination-controls *ngIf="latestArrivalList.length > 10" (pageChange)="sno = $event"></pagination-controls> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card latest-arrival-card" *ngIf="latestArrivalList.length !== 0">
+                            <div class="bk-gutter-space">
+                               
+                                <div class="bk-new-heading">
+                                    <h2>"We are Always the Best"</h2>
+                                    <div class="bk-new-decor">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="bk-new-color bk-border-radius">
+                                                    <div class="bk-new-text">
+                                                        <span class="bk-black-color text-sh">Check out our</span>
+                                                        <span class="bk-red-color">Latest Arrivals</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      <div class="row"> 
+                                        <div class="col-md-8">
+                                          <div class="row">
+                                            <div class="col pr-0"> 
+                                                 <div class="bk-specif parent-height">
+                                                   <img src="../../../assets/images/Landscape.png">
+                                                 </div>
+                                           </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-6 pr-0"> 
+                                                <div class="bk-img-hand bk-rad parent-height">
+                                                    <img src="../../../assets/images/CakeImage/Cupcake.png">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pr-0">
+                                                <div class="bk-img-hand parent-height">
+                                                    <img src="../../../assets/images/CakeImage/Crossiant.png">
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="bk-img-last">
+                                                <img src="../../../assets/images/CakeImage/BirthdayCake.jpg">
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="formmodal" [class.d-block]="showPopup" [class.d-none]="!showPopup">
+            <div class="modal-dialog">
+                <div class="modal-content border-success animated" [class.swing]="errorMsg.length === 0" [class.shake]="errorMsg.length != 0">
+                    <div class="modal-header bg-success">
+                        <h5 class="modal-title text-white">{{modalBoxName}} Latest Arrivals</h5>
+                        <button id="closeModal" type="button" class="close text-white" (click)="popUpClose()" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form autocomplete="off">
+                            <div class="form-group">
+                                <input [(ngModel)]="editBannerId" type="hidden" class="form-control" id="editBannerId" [ngModelOptions]="{standalone: true}" *ngIf="modalBoxName === 'Edit'">
+                                <input [(ngModel)]="latestArrivalName" [class.is-invalid]="errorMsg.latest_arrival_name" type="text" class="form-control" id="latestArrivalName" placeholder="Enter Latest Arrival Name" [ngModelOptions]="{standalone: true}" (keypress)="keyPress($event, modalBoxName, editBannerId)" autocomplete="off">
+                                <p class="invalid-feedback" *ngIf="errorMsg.latest_arrival_name">{{errorMsg.latest_arrival_name}}</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" tabindex="-1" class="btn btn-danger" (click)="popUpClose()" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                        <button type="button" class="btn btn-success" [ngClass]="{'btn-loading disabled': loadingBtn}" (click)="store()" *ngIf="modalBoxName === 'Create'"><i class="fa fa-check-square-o"></i> {{modalBoxName}} </button>
+                        <button type="button" class="btn btn-success" [ngClass]="{'btn-loading disabled': loadingBtn}" (click)="update(editBannerId)" *ngIf="modalBoxName === 'Edit'"><i class="fa fa-check-square-o"></i> {{modalBoxName}} </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal " [class.d-block]="viewBox" [class.d-none]="!viewBox">
+            <div class="container boder-bottom-li animated bounceInDown">
+                <div class="title">{{viewNamePreview}}</div>
+                <button (click)="popUpClose()" class="view-close btn-danger"></button>
+                <div class="text">
+                    <div class="row">
+                        <div class="col-sm-12 ">
+                            <div class="heading">
+                            </div>
+                            <div class="body-text">
+                                <img *ngIf="showImage" src="{{viewImagePreview}}" alt="image" width="300" height="400">
+                            </div>
+                        </div>
+                        <div class="view-card">
+                            <div class="card-header">
+                                <h4 class="mb-1">Description</h4>
+                            </div>
+                            <div class="card-body text-left">
+                                <p>{{viewImageDisc}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

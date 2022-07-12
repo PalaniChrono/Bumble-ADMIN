@@ -1,0 +1,203 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+    <div class="page">
+        <div class="page-main">
+            <div class="app-content">
+                <div class="side-app">
+                    <div class="page-header text-center">
+                        <h4 class="page-title mx-auto">Booking Section</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card p-4" [class.h-250]="loading" *ngIf="orderDetails.length == 0">
+                                <ngx-loading [show]="loading"></ngx-loading>
+                                <div class="card-header-1">
+                                    <h4 class="text-center">Testimony Not Available</h4>
+                                </div>
+                            </div>
+
+
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Book Us</button>
+                              </li>
+                              <!-- <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-event-tab" data-bs-toggle="pill" data-bs-target="#pills-event" type="button" role="tab" aria-controls="pills-event" aria-selected="false">Extra Event</button>
+                              </li> -->
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Contact Us</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Book Us Small</button>
+                              </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent" style="color: white;">
+                              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="card" >
+                                  <div class="card-header" style="color: black;">
+                                      <div class="card-title mx-auto">Number of Book Us - ( {{bookus.length}} )</div>
+                                  </div>
+                                  <div class="card-body">
+                                      <div class="table-responsive">
+                                          <table class="table table-striped table-bordered text-nowrap w-100 text-center align-middle">
+                                              <thead>
+                                                  <tr>
+                                                      <!-- <th class="wd-10p">S.no</th>
+                                                      <th class="wd-10p">Bride Name</th>
+                                                      <th class="wd-10p">Groom Name</th>
+                                                      <th class="wd-10p">Email</th>
+                                                      <th class="wd-10p">Phone</th>
+                                                      <th class="wd-10p">City</th>
+                                                      <th class="wd-10p">Wedding Type</th>
+                                                      <th class="wd-10p">Event</th>
+                                                      <th class="wd-10p">Date</th>
+                                                      <th class="wd-10p">Crowd Strength</th>
+                                                      <th class="wd-10p">Location</th>
+                                                      <th class="wd-10p">Venue</th>
+                                                      <th class="wd-10p">Time</th>
+                                                      <th class="wd-10p">More About Couple and Wedding</th> -->
+                                                      <th class="wd-10p">S.no</th>
+                                                      <th class="wd-10p">Bride Name</th>
+                                                      <th class="wd-10p">Groom Name</th>
+                                                      <th class="wd-10p">View Event Details</th>
+                                                      <th class="wd-10p">Enquire Name</th>
+                                                      <th class="wd-10p">Mobile NO</th>
+                                                      <th class="wd-10p">Mail ID </th>
+                                                      <!-- <th class="wd-10p">Event Date</th>
+                                                      <th class="wd-10p">Event Time</th>
+                                                      <th class="wd-10p">Venue</th>
+                                                      <th class="wd-10p">City</th>
+                                                      <th class="wd-10p">Enquire Name</th>
+                                                      <th class="wd-10p">Mobile No</th>
+                                                      <th class="wd-10p">Email ID</th> -->
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr *ngFor="let book of bookus| paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+                                                      <td>{{(i+1) + ((p-1) * 5)}}</td>
+                                                      <!-- <td>{{book.bride_name}}</td>
+                                                      <td>{{book.groom_name}}</td>
+                                                      <td>{{book.email}}</td>
+                                                      <td>{{book.phone}}</td>
+                                                      <td>{{book.city}}</td>
+                                                      <td>{{book.weddingtype}}</td>
+                                                      <td>{{book.event}}</td>
+                                                      <td>{{book.date}}</td>
+                                                      <td>{{book.location}}</td>
+                                                      <td>{{book.venue}}</td>
+                                                      <td>{{book.time}}</td>
+                                                      <td>{{book.tellusmore}}</td> -->
+
+                                                      <td>{{book.bride_name}}</td>
+                                                      <td>{{book.groom_name}}</td>
+                                                      <td>
+                                                        <button class="btn btn-server btn-success" [routerLink]="['/event-detail', book.id]"><i class="fa fa-pencil-square-o fa-1x mobile-icon"></i><span class="window-text">View </span></button>
+                                                     </td>
+                                                      <td>{{book.enquire_name}}</td>
+                                                      <td>{{book.enquire_mobile_no}}</td>
+                                                      <td>{{book.email_id}}</td>
+                                                      
+                                                      <!-- <td>{{book.event_date | date:'MMM d, y'}}</td>
+                                                      <td>{{book.event_time }}</td>
+                                                      <td>{{book.venue}}</td>
+                                                      <td>{{book.city}}</td>
+                                                      <td>{{book.enquire_name}}</td>
+                                                      <td>{{book.enquire_mobile_no}}</td>
+                                                      <td>{{book.email_id}}</td> -->
+                                                  </tr>
+                                              </tbody>
+                                          </table>
+                                          <pagination-controls *ngIf="orderDetails.length > 5" (pageChange)="p = $event"></pagination-controls>
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                <div class="card" >
+                                <div class="card-header" style="color: black;">
+                                    <div class="card-title mx-auto">Number of Contact Us - ( {{orderDetails.length}} )</div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered text-nowrap w-100 text-center align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th class="wd-10p">S.no</th>
+                                                    <th class="wd-10p">Bride/Groom Name</th>
+                                                    <th class="wd-10p">Phone</th>
+                                                    <th class="wd-10p">City</th>
+                                                    <th class="wd-10p">Event</th>
+                                                    <th class="wd-10p">Event Date</th>
+                                                    <th class="wd-10p">Location</th>
+                                                    <!-- <th class="wd-10p">Confirmed/Not</th> -->
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let order of orderDetails| paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+                                                    <td>{{(i+1) + ((p-1) * 5)}}</td>
+                                                    <td>{{order.bride_groomname	}}</td>
+                                                    <td>{{order.phone}}</td>
+                                                    <td>{{order.city}}</td>
+                                                    <td>{{order.event}}</td>
+                                                    <td>{{order.eventdate}}</td>
+                                                    <td>{{order.location}}</td>
+                                                    <!-- <td><mat-slide-toggle style="color: black;" [(ngModel)]="confirmed" onchange="checked()">Client {{confirmed}} {{(i+1) + ((p-1) * 5)}}</mat-slide-toggle></td> -->
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <pagination-controls *ngIf="orderDetails.length > 5" (pageChange)="p = $event"></pagination-controls>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+                                <div class="card" >
+                                  <div class="card-header" style="color: black;">
+                                      <div class="card-title mx-auto">Number of inquiries - ( {{homebookus.length}} )</div>
+                                  </div>
+                                  <div class="card-body">
+                                      <div class="table-responsive">
+                                          <table class="table table-striped table-bordered text-nowrap w-100 text-center align-middle">
+                                              <thead>
+                                                  <tr>
+                                                      <th class="wd-10p">S.no</th>
+                                                      <th class="wd-10p">Name</th>
+                                                      <th class="wd-10p">Phone</th>
+
+
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr *ngFor="let homebookus of homebookus| paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+                                                      <td>{{(i+1) + ((p-1) * 5)}}</td>
+                                                      <td>{{homebookus.name	}}</td>
+                                                      <td>{{homebookus.mobile}}</td>
+
+                                                      <!-- <td><mat-slide-toggle style="color: black;" [(ngModel)]="confirmed" onchange="checked()">Client {{confirmed}} {{(i+1) + ((p-1) * 5)}}</mat-slide-toggle></td> -->
+
+                                                  </tr>
+                                              </tbody>
+                                          </table>
+                                          <pagination-controls *ngIf="orderDetails.length > 5" (pageChange)="p = $event"></pagination-controls>
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <app-footer></app-footer>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,412 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+  <div class="page">
+    <div
+      class="page-main"
+      [class.opacity-2]="viewBox"
+      [class.opacity-10]="!viewBox"
+    >
+      <div class="app-content">
+        <div class="side-app">
+          <div class="page-header ">
+            <h4 class="page-title mx-auto">Services</h4>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Services 1 Image</label>
+                      <img [src]="baby_portrait" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'services1_img'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                      <div class="form-group col-12 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label> Services 1 Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="services1_textcontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-5">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updateservicestext()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+
+
+
+
+
+
+
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Services Image 2 </label>
+                      <img [src]="baby_img_2" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'services2_img'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                      <div class="form-group col-12 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label> Services 2 Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="services2_textcontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-5">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updateservicestext()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Services Image 3 </label>
+                      <img [src]="baby_img_3" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'services3_img	'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                      <div class="form-group col-12 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label>  Services 3 Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="services3_textcontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-5">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updateservicestext()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Services Image 4 </label>
+                      <img [src]="baby_img_4" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'services4_img'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                      <div class="form-group col-12 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label> Services 4 Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="services4_textcontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-5">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updateservicestext()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Services Image 5 </label>
+                      <img [src]="baby_img_5" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'services5_img	'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                      <div class="form-group col-12 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label>Services 5 Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="services5_textcontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-5">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updateservicestext()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Services Image 6 </label>
+                      <img [src]="baby_img_6" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'services6_img'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                      <div class="form-group col-12 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label>Services 6 Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="services6_textcontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-5">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updateservicestext()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Services Image 7 </label>
+                      <img [src]="baby_img_7" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'services7_img'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                      <div class="form-group col-12 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label>Services 7 Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="services7_textcontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-5">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updateservicestext()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Services Image 8</label>
+                      <img [src]="baby_img_8" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'services8_img'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                      <div class="form-group col-12 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label>Services 8 Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="services8_textcontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-5">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updateservicestext()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Services Image 9 </label>
+                      <img [src]="baby_img_9" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'services9_img'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                      <div class="form-group col-12 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label>Services 9 Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="services9_textcontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-5">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updateservicestext()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="row">
+                    <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                      <label  class="homebannernamelabel">Services Image 10 </label>
+                      <img [src]="baby_img_10" class="w-80 scale-bottom" />
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                      <app-sub-category-image [data]="'services10_img'"></app-sub-category-image>
+                      </div>
+
+                  </div>
+                  <form autocomplete="off" class="homebannernamelabel ">
+                    <div class="row ">
+                      <div class="form-group col-12 ">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-column justify-content-start  align-items-center">
+                            <label>Service 10 Text Content</label>
+                            <textarea class="border border-dark w-100" rows="4"
+                              [placeholder]="'Enter text here...'"
+                              [(ngModel)]="services10_textcontent"
+                              [ngModelOptions]="{ standalone: true }"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-5">
+                        <button class="btn btn-success   rounded mx-auto" (click)="updateservicestext()">
+                        Update
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>
