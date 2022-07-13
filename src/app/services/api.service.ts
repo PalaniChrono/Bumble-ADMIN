@@ -8,8 +8,8 @@ let headers = head.set('Accept', 'application/json');
 })
 export class ApiService {
 
-    // apiURL = 'http://localhost:8000/api';
-    apiURL = 'http://192.168.0.22:8001/api';
+    apiURL = 'http://localhost:8000/api';
+    // apiURL = 'http://192.168.0.22:8001/api';
     // apiURL = 'https://bumbleapi.chronoinfotech.com/api';
 
     constructor(private http: HttpClient) { }

@@ -36,8 +36,6 @@ import { FoodDirective } from './directive/food.directive';
 import { NumbersOnlyDirective } from './directive/numbers-only.directive';
 import { UsersComponent } from './users/users.component';
 import { ProductsComponent } from './components/products/products.component';
-import { BannerImageComponent } from './components/banner-image/banner-image.component';
-import { BannerComponent } from './components/banner/banner.component';
 import { MarkdownModule } from 'ngx-markdown';
 import {NgxImageCompressService} from 'ngx-image-compress';
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -61,8 +59,6 @@ import { LinkProductsComponent } from './components/link-products/link-products.
 import { LinkingProductsComponent } from './components/linking-products/linking-products.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { LocationComponent } from './components/location/location.component';
-import { AdBannerComponent } from './components/ad-banner/ad-banner.component';
-import { AdBannerImageComponent } from './components/ad-banner-image/ad-banner-image.component';
 import { RegionComponent } from './region/region.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { LocationDetailsComponent } from './location-details/location-details.component';
@@ -87,8 +83,6 @@ import { CategoryDiscountComponent } from './category-discount/category-discount
 import { ProductDiscountComponent } from './product-discount/product-discount.component';
 import { CustomerDiscountComponent } from './customer-discount/customer-discount.component';
 import { DriverComponent } from './driver/driver.component';
-import { AddonsComponent } from './components/addons/addons.component';
-import { AddonImageComponent } from './components/addon-image/addon-image.component';
 import { LatestArrivalComponent } from './components/latest-arrival/latest-arrival.component';
 import { LatestArrivalImageComponent } from './components/latest-arrival-image/latest-arrival-image.component';
 import { LightboxModule } from 'ngx-lightbox';
@@ -187,8 +181,6 @@ export class AuthInterceptor implements HttpInterceptor {
         ProgressComponent,
         ProductImageComponent,
         ProductsComponent,
-        BannerImageComponent,
-        BannerComponent,
         HeaderMenuComponent,
         SubCategoryComponent,
         TagsComponent,
@@ -207,8 +199,6 @@ export class AuthInterceptor implements HttpInterceptor {
         LinkingProductsComponent,
         SettingsComponent,
         LocationComponent,
-        AdBannerComponent,
-        AdBannerImageComponent,
         RegionComponent,
         LocationDetailsComponent,
         PincodeComponent,
@@ -230,8 +220,6 @@ export class AuthInterceptor implements HttpInterceptor {
         ProductDiscountComponent,
         CustomerDiscountComponent,
         DriverComponent,
-        AddonsComponent,
-        AddonImageComponent,
         LatestArrivalComponent,
         LatestArrivalImageComponent,
         LashcoursesComponent,

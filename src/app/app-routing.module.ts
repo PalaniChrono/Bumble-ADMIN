@@ -10,8 +10,6 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
 import { AuthGuard } from './guards/auth.guard';
 import { UsersComponent } from './users/users.component';
 import { ProductsComponent } from './components/products/products.component';
-import { BannerImageComponent } from './components/banner-image/banner-image.component';
-import { BannerComponent } from './components/banner/banner.component';
 import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
 import { SubCategoryComponent } from './components/sub-category/sub-category.component';
 import { TagsComponent } from './components/tags/tags.component';
@@ -30,8 +28,6 @@ import { LinkProductsComponent } from './components/link-products/link-products.
 import { LinkingProductsComponent } from './components/linking-products/linking-products.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { LocationComponent } from './components/location/location.component';
-import { AdBannerComponent } from './components/ad-banner/ad-banner.component';
-import { AdBannerImageComponent } from './components/ad-banner-image/ad-banner-image.component';
 import { RegionComponent } from './region/region.component';
 import { LocationDetailsComponent } from './location-details/location-details.component';
 import { PincodeComponent } from './pincode/pincode.component';
@@ -53,8 +49,6 @@ import { CategoryDiscountComponent } from './category-discount/category-discount
 import { ProductDiscountComponent } from './product-discount/product-discount.component';
 import { CustomerDiscountComponent } from './customer-discount/customer-discount.component';
 import { DriverComponent } from './driver/driver.component';
-import { AddonsComponent } from './components/addons/addons.component';
-import { AddonImageComponent } from './components/addon-image/addon-image.component';
 import { LatestArrivalComponent } from './components/latest-arrival/latest-arrival.component';
 import { LatestArrivalImageComponent } from './components/latest-arrival-image/latest-arrival-image.component';
 import { LashcoursesComponent } from './lashcourses/lashcourses.component';
@@ -111,10 +105,6 @@ const routes: Routes = [
     {path: 'order-detail/:id', component: OrderDetailsComponent},
     {path: 'cancel-orders', component: CancelOrdersComponent},
     {path: 'cancel-order-detail/:id', component: CancelOrderDetailsComponent},
-    {path: 'banner', component: BannerComponent},
-    {path: 'banner-image/:id', component: BannerImageComponent},
-    {path: 'ad-banner', component: AdBannerComponent},
-    {path: 'ad-banner-image/:id', component: AdBannerImageComponent},
     {path: 'mobile-banner', component: MobileBannerComponent},
     {path: 'mobile-banner-image/:id', component: MobileBannerImageComponent},
     {path: 'promo-code', component: PromoCodesComponent},
@@ -144,8 +134,6 @@ const routes: Routes = [
     {path: 'product-discount', component: ProductDiscountComponent},
     {path: 'customer-discount', component: CustomerDiscountComponent},
     {path: 'driver', component: DriverComponent},
-    {path: 'addons', component: AddonsComponent},
-    {path: 'addon-image/:id', component: AddonImageComponent},
     {path:'latest-arrivals', component:LatestArrivalComponent},
     {path: 'latest-arrivals-image/:id', component:LatestArrivalImageComponent},
     {path:'lashcourse',component:LashcoursesComponent},

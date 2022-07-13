@@ -7,6 +7,8 @@ import { ImageService } from 'src/app/services/image.service';
 import { NgxImageCompressService } from 'ngx-image-compress';
 import { ImageCroppedEvent } from 'ngx-image-cropper';
 import { Homesection1Component } from 'src/app/homesection1/homesection1.component';
+import { Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-sub-category-image',
@@ -27,6 +29,7 @@ export class SubCategoryImageComponent implements OnInit {
   banner_3 : any = ""
   banner_4 : any = ""
 
+  @Output("refreshCurrentData")  refreshCurrentData: EventEmitter<any> = new EventEmitter();
 
 
   constructor(
@@ -91,7 +94,8 @@ export class SubCategoryImageComponent implements OnInit {
       if (data.error === false) {
         this.toastr.success(data.message);
         this.closeCommentPopUp();
-        window.location.reload();
+        // window.location.reload();
+        this.refreshCurrentData.emit();
        } else {
         this.toastr.error(data.message);
       }

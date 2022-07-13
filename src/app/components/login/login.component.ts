@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
                     localStorage.setItem('role_name', 'Admin');
                     this.loading = false;
                     console.log('login success');
-                    this.route.navigate(['banner']);
+                    this.route.navigate(['HomeSectionOne']);
                 } else {
                     this.toastr.error(data.message);
                     this.loading = false;

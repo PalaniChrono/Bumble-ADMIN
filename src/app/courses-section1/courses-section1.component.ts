@@ -117,6 +117,9 @@ export class CoursesSection1Component implements OnInit {
   wed_img_10 : any = ""
   wed_img_11 : any = ""
   wed_img_12 : any = ""
+  wed_img_13 : any = ""
+  wed_img_14 : any = ""
+
 
   constructor(
     private apiService: ApiService,
@@ -147,6 +150,8 @@ export class CoursesSection1Component implements OnInit {
         this.wed_img_10  = value[0].wedding10
         this.wed_img_11  = value[0].wedding11
         this.wed_img_12  = value[0].wedding12
+        this.wed_img_13  = value[0].wedding13
+        this.wed_img_14  = value[0].wedding14
         this.wedding_textcontent = value[0].weddingtextcontent
         this.all_textContent = value[0].alltextcontent;
 

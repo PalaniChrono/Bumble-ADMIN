@@ -26,7 +26,7 @@
                         <img [src]="banner_1" class="w-80 scale-bottom" />
                       </div>
                       <div class="form-group col-6 mx-auto">
-                        <app-sub-category-image [data]="'banner_1'"></app-sub-category-image>
+                        <app-sub-category-image (refreshCurrentData)="getHomeBanner()" [data]="'banner_1'"></app-sub-category-image>
 
                       </div>
                       <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
@@ -34,21 +34,21 @@
                         <img [src]="banner_2" class="w-80 scale-bottom" />
                       </div>
                       <div class="form-group col-6 mx-auto">
-                        <app-sub-category-image  [data]="'banner_2'"></app-sub-category-image>
+                        <app-sub-category-image (refreshCurrentData)="getHomeBanner()"   [data]="'banner_2'"></app-sub-category-image>
 
                       </div>  <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
                         <label class="homebannernamelabel">Banner Image-3</label>
                         <img [src]="banner_3" class="w-80 scale-bottom" />
                       </div>
                       <div class="form-group col-6 mx-auto">
-                        <app-sub-category-image   [data]="'banner_3'"></app-sub-category-image>
+                        <app-sub-category-image (refreshCurrentData)="getHomeBanner()"   [data]="'banner_3'"></app-sub-category-image>
 
                       </div>  <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
                         <label class="homebannernamelabel">Banner Image-4</label>
                         <img [src]="banner_4" class="w-80 scale-bottom" />
                       </div>
                       <div class="form-group col-6 mx-auto">
-                        <app-sub-category-image   [data]="'banner_4'"></app-sub-category-image>
+                        <app-sub-category-image (refreshCurrentData)="getHomeBanner()"   [data]="'banner_4'"></app-sub-category-image>
 
                       </div>
 

@@ -23,7 +23,7 @@
                       <img [src]="card2_img" class="w-80 scale-bottom" />
                     </div>
                     <div class="form-group col-6 mx-auto">
-                      <app-sub-category-image [data]="'home_card_2_img'"></app-sub-category-image>
+                      <app-sub-category-image  (refreshCurrentData)="gethomecontent()" [data]="'home_card_2_img'"></app-sub-category-image>
                       </div>
 
                   </div>
@@ -33,7 +33,7 @@
                       <img [src]="card2_iconimg" class="w-80 scale-bottom" />
                     </div>
                     <div class="form-group col-6 mx-auto">
-                      <app-sub-category-image [data]="'home_card2_iconImg'"></app-sub-category-image>
+                      <app-sub-category-image  (refreshCurrentData)="gethomecontent()" [data]="'home_card2_iconImg'"></app-sub-category-image>
                       </div>
 
                   </div>

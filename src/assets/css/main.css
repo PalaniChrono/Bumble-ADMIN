@@ -163,7 +163,7 @@ iframe {
 	color: black;
 	display: block;
 	width: 100%;
-	background: #e8d236;
+	/* background: #e8d236; */
 	/* background: linear-gradient(to right bottom, #a08f15 0%, #e8d236 75%); */
 
 	height: 45px;
@@ -215,7 +215,9 @@ iframe {
 }
 .input100:focus+.focus-input100+.symbol-input100 {
 	text-transform: uppercase;
-    background: linear-gradient(to right bottom, #a08f15 0%, #e8d236 75%);
+    /* background: linear-gradient(to right bottom, #a08f15 0%, #e8d236 75%); */
+	    background: linear-gradient(to right bottom, #ae8625 0%, #f7ef8a 75%);
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 	padding-left: 28px;

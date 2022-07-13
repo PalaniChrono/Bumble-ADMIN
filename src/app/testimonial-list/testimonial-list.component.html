@@ -60,10 +60,10 @@
                                                       <th class="wd-10p">S.no</th>
                                                       <th class="wd-10p">Bride Name</th>
                                                       <th class="wd-10p">Groom Name</th>
-                                                      <th class="wd-10p">View Event Details</th>
                                                       <th class="wd-10p">Enquire Name</th>
                                                       <th class="wd-10p">Mobile NO</th>
                                                       <th class="wd-10p">Mail ID </th>
+                                                      <th class="wd-10p">View Event Details</th>
                                                       <!-- <th class="wd-10p">Event Date</th>
                                                       <th class="wd-10p">Event Time</th>
                                                       <th class="wd-10p">Venue</th>
@@ -91,12 +91,13 @@
 
                                                       <td>{{book.bride_name}}</td>
                                                       <td>{{book.groom_name}}</td>
-                                                      <td>
-                                                        <button class="btn btn-server btn-success" [routerLink]="['/event-detail', book.id]"><i class="fa fa-pencil-square-o fa-1x mobile-icon"></i><span class="window-text">View </span></button>
-                                                     </td>
+                                                     
                                                       <td>{{book.enquire_name}}</td>
                                                       <td>{{book.enquire_mobile_no}}</td>
                                                       <td>{{book.email_id}}</td>
+                                                      <td>
+                                                        <button class="btn btn-server btn-success" [routerLink]="['/event-detail', book.id]"><i class="fa fa-pencil-square-o fa-1x mobile-icon"></i><span class="window-text">View </span></button>
+                                                     </td>
                                                       
                                                       <!-- <td>{{book.event_date | date:'MMM d, y'}}</td>
                                                       <td>{{book.event_time }}</td>
